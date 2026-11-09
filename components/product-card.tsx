@@ -1,6 +1,7 @@
 import { Play } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { formatGrams, formatPrice, type Product } from '@/lib/catalog'
+import { formatGrams, formatPrice, isUnavailable, type Product } from '@/lib/catalog'
+import { ProductBadge } from '@/components/product-badge'
 
 type Props = {
   product: Product
@@ -23,9 +24,13 @@ export function ProductCard({ product, onSelect, size = 'grid', priority }: Prop
           alt=""
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
-          className="size-full object-cover transition-transform duration-500 group-active:scale-[0.98]"
+          className={cn(
+            'size-full object-cover transition-transform duration-500 group-active:scale-[0.98]',
+            isUnavailable(product) && 'opacity-50 grayscale',
+          )}
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <ProductBadge badge={product.badge} className="absolute left-2.5 top-2.5" />
         <span className="absolute right-2.5 top-2.5 flex size-7 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm">
           <Play className="size-3 fill-white text-white" aria-hidden="true" />
         </span>

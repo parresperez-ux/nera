@@ -6,52 +6,69 @@
   "contact": {
     "handle": "@rosanerapack",
     "telegram": "https://t.me/rosanerapack",
-    "signal": "https://signal.me/#p/+00000000000"
+    "signal": "https://signal.me/#p/+00000000000",
+    "message": "Hi! I am interested in {product} ({grams}, {price}). Is it available?",
+    "generalMessage": "Hi! I would like to place an order."
   },
   "products": [
     {
       "id": "noir-01",
       "name": "Noir Reserve",
+      "badge": "new",
       "description": "Our signature selection. Deep, rich and carefully packed.",
       "price": 25,
       "grams": 5,
       "video": "",
       "poster": "/products/p1.png",
-      "photos": ["/products/p1.png", "/products/p3.png"]
+      "photos": [
+        "/products/p1.png",
+        "/products/p3.png"
+      ]
     },
     {
       "id": "amber-02",
       "name": "Amber Select",
+      "badge": "",
       "description": "Warm notes with a smooth finish. A house favourite.",
       "price": 40,
       "grams": 10,
       "video": "",
       "poster": "/products/p3.png",
-      "photos": ["/products/p3.png"]
+      "photos": [
+        "/products/p3.png"
+      ]
     },
     {
       "id": "kraft-03",
       "name": "Kraft Edition",
+      "badge": "soldout",
       "description": "Small batch, sealed fresh in our kraft pouch.",
       "price": 18,
       "grams": 3.5,
       "video": "",
       "poster": "/products/p2.png",
-      "photos": ["/products/p2.png", "/products/p1.png"]
+      "photos": [
+        "/products/p2.png",
+        "/products/p1.png"
+      ]
     },
     {
       "id": "blanc-04",
       "name": "Blanc Tin",
+      "badge": "soon",
       "description": "Clean and light. Presented in a ceramic tin.",
       "price": 55,
       "grams": 14,
       "video": "",
       "poster": "/products/p4.png",
-      "photos": ["/products/p4.png"]
+      "photos": [
+        "/products/p4.png"
+      ]
     },
     {
       "id": "noir-05",
       "name": "Noir Petite",
+      "badge": "",
       "description": "The Noir Reserve in a smaller format.",
       "price": 14,
       "grams": 2,
@@ -62,6 +79,7 @@
     {
       "id": "amber-06",
       "name": "Amber Large",
+      "badge": "",
       "description": "Generous size of our Amber Select.",
       "price": 90,
       "grams": 28,

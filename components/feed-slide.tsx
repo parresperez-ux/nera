@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ChevronUp, Play } from 'lucide-react'
 import { formatGrams, formatPrice, type Catalog, type Product } from '@/lib/catalog'
 import { ContactButtons } from '@/components/contact-panel'
+import { ProductBadge } from '@/components/product-badge'
 
 type Props = {
   product: Product
@@ -131,6 +132,7 @@ export function FeedSlide({ product, contact, isActive, isNear, muted, onAutopla
           </div>
         )}
 
+        <ProductBadge badge={product.badge} className="mb-3" />
         <h2 className="font-serif text-4xl leading-none text-white text-balance">{product.name}</h2>
         <p className="mt-2.5 max-w-sm text-pretty text-sm leading-relaxed text-white/75">{product.description}</p>
 
@@ -146,8 +148,8 @@ export function FeedSlide({ product, contact, isActive, isNear, muted, onAutopla
         </dl>
 
         <div className="pointer-events-auto mt-5">
-          <ContactButtons contact={contact} compact />
-          <p className="mt-2.5 text-center text-[11px] text-white/55">
+          <ContactButtons contact={contact} product={product} compact />
+          <p className="mt-1 text-center text-[11px] text-white/55">
             To order, message {contact.handle} on Telegram or Signal
           </p>
         </div>
